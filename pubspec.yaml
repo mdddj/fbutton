@@ -1,7 +1,6 @@
-name: fbutton
+name: fbutton_nullsafety
 description: Let developers just need to grasp only one button component.
-version: 2.0.2
-author: CoorChice<coorchice.cb@alibaba-inc.com>
+version: 4.0.0
 homepage: https://github.com/Fliggy-Mobile/fbutton
 
 environment:
@@ -11,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  fcontrol: ^1.0.0
+  fcontrol: ^1.0.1
 
 dev_dependencies:
   flutter_test:
