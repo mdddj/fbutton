@@ -300,7 +300,7 @@ class _FButton extends State<FButton> with SingleTickerProviderStateMixin {
 
   Color shadowColor;
 
-  Tween shadowTween;
+  Tween<double> shadowTween;
 
   AnimationController animationController;
 
@@ -316,7 +316,7 @@ class _FButton extends State<FButton> with SingleTickerProviderStateMixin {
       duration: Duration(milliseconds: 300),
       vsync: this,
     );
-    shadowTween = Tween(begin: 0, end: widget.shadowBlur);
+    shadowTween = Tween<double>(begin: 0, end: widget.shadowBlur);
     animationController.addListener(() {
       setState(() {
         shadowBlur = shadowTween.evaluate(animationController);
@@ -356,7 +356,7 @@ class _FButton extends State<FButton> with SingleTickerProviderStateMixin {
                 strokeWidth: widget.loadingStrokeWidth,
                 valueColor: AlwaysStoppedAnimation<Color>(widget.loadingColor ==
                         null
-                    ? Theme.of(context).accentColor.withOpacity(disableOpacity)
+                    ? Theme.of(context).colorScheme.secondary.withOpacity(disableOpacity)
                     : widget.loadingColor.withOpacity(disableOpacity)),
               ),
             )
