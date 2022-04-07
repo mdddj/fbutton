@@ -1,7 +1,8 @@
-export 'package:fcontrol/fdefine.dart';
 import 'package:fcontrol/fcontrol.dart';
 import 'package:fcontrol/fdefine.dart';
 import 'package:flutter/material.dart';
+
+export 'package:fcontrol/fdefine.dart';
 
 /// [FButton] 图片相对与文字的位置
 ///
@@ -336,7 +337,7 @@ class _FButton extends State<FButton> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
-  updateParam() {
+ void updateParam() {
     shadowBlur = widget.shadowBlur;
     shadowColor = widget.shadowColor;
     loading = widget.loading;
@@ -557,7 +558,7 @@ class _FButton extends State<FButton> with SingleTickerProviderStateMixin {
     return layerText;
   }
 
-  onPressed() {
+  void onPressed() {
     widget.onPressed?.call();
     if (widget.clickLoading && !loading) {
       loading = true;
@@ -567,7 +568,7 @@ class _FButton extends State<FButton> with SingleTickerProviderStateMixin {
     }
   }
 
-  pressOutEffect() {
+  void pressOutEffect() {
     shadowBlur = (shadowBlur ?? 0) + 6;
     shadowColor = widget.shadowColor;
     if (shadowColor == null) {
